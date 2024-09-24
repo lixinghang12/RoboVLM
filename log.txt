@@ -1,0 +1,244 @@
+discrete: True
+organize_type: interleave
+image_history: True
+action_history: True
+
+rgb: torch.Size([4, 8, 3, 224, 224])
+hand_rgb: None
+fwd_rgb_chunck: torch.Size([4, 8, 2, 3, 224, 224])
+fwd_hand_rgb_chunck: None
+fwd_mask: torch.Size([4, 8, 2])
+text: torch.Size([4, 8, 36])
+text_mask: torch.Size([4, 8, 36])
+action: torch.Size([4, 9, 7])
+action_mask: torch.Size([4, 9])
+action_chunck: torch.Size([4, 2, 7])
+chunck_mask: torch.Size([4, 2])
+instr_and_action_ids: torch.Size([4, 8, 36])
+instr_and_action_labels: torch.Size([4, 8, 36])
+instr_and_action_mask: torch.Size([4, 8, 36])
+data_source: action
+pass code test!!!
+
+====================================================================================================================================
+
+discrete: True
+organize_type: segment
+image_history: False
+action_history: True
+
+rgb: torch.Size([4, 1, 3, 224, 224])
+hand_rgb: None
+fwd_rgb_chunck: None
+fwd_hand_rgb_chunck: None
+fwd_mask: None
+text: torch.Size([4, 38])
+text_mask: torch.Size([4, 38])
+action: torch.Size([4, 9, 7])
+action_mask: torch.Size([4, 9])
+action_chunck: torch.Size([4, 8, 2, 7])
+chunck_mask: torch.Size([4, 8, 2])
+instr_and_action_ids: torch.Size([4, 38])
+instr_and_action_labels: torch.Size([4, 38])
+instr_and_action_mask: torch.Size([4, 38])
+data_source: action
+pass code test!!!
+
+====================================================================================================================================
+
+discrete: True
+organize_type: segment
+image_history: True
+action_history: False
+
+rgb: torch.Size([4, 10, 3, 224, 224])
+hand_rgb: None
+fwd_rgb_chunck: None
+fwd_hand_rgb_chunck: None
+fwd_mask: None
+text: torch.Size([4, 32])
+text_mask: torch.Size([4, 32])
+action: torch.Size([4, 9, 7])
+action_mask: torch.Size([4, 9])
+action_chunck: torch.Size([4, 8, 2, 7])
+chunck_mask: torch.Size([4, 8, 2])
+instr_and_action_ids: torch.Size([4, 32])
+instr_and_action_labels: torch.Size([4, 32])
+instr_and_action_mask: torch.Size([4, 32])
+data_source: action
+pass code test!!!
+
+====================================================================================================================================
+
+discrete: True
+organize_type: segment
+image_history: True
+action_history: True
+
+rgb: torch.Size([4, 10, 3, 224, 224])
+hand_rgb: None
+fwd_rgb_chunck: None
+fwd_hand_rgb_chunck: None
+fwd_mask: None
+text: torch.Size([4, 31])
+text_mask: torch.Size([4, 31])
+action: torch.Size([4, 9, 7])
+action_mask: torch.Size([4, 9])
+action_chunck: torch.Size([4, 8, 2, 7])
+chunck_mask: torch.Size([4, 8, 2])
+instr_and_action_ids: torch.Size([4, 31])
+instr_and_action_labels: torch.Size([4, 31])
+instr_and_action_mask: torch.Size([4, 31])
+data_source: action
+pass code test!!!
+
+====================================================================================================================================
+
+discrete: False
+organize_type: interleave
+image_history: True
+action_history: True
+
+rgb: torch.Size([4, 8, 3, 224, 224])
+hand_rgb: None
+fwd_rgb_chunck: torch.Size([4, 8, 2, 3, 224, 224])
+fwd_hand_rgb_chunck: None
+fwd_mask: torch.Size([4, 8, 2])
+text: torch.Size([4, 8, 18])
+text_mask: torch.Size([4, 8, 18])
+action: torch.Size([4, 9, 7])
+action_mask: torch.Size([4, 9])
+action_chunck: torch.Size([4, 2, 7])
+chunck_mask: torch.Size([4, 2])
+instr_and_action_ids: torch.Size([4, 8, 18])
+instr_and_action_labels: torch.Size([4, 8, 18])
+instr_and_action_mask: torch.Size([4, 8, 18])
+data_source: action
+pass code test!!!
+
+08/20 [13:27:56] INFO     | >> Load dataset info from /mnt/bn/robotics-data-lxh-lq/openvla/datasets/open-x-embodiment/fractal20220817_data/0.1.0                      dataset_info.py:599
+                 INFO     | >> Constructing tf.data.Dataset fractal20220817_data for split all, from                                                                 logging_logger.py:49
+                          /mnt/bn/robotics-data-lxh-lq/openvla/datasets/open-x-embodiment/fractal20220817_data/0.1.0                                                                     
+                 INFO     | >> [*] Loading existing dataset statistics from                                                                                             data_utils.py:214
+                          /home/tiger/.cache/orca/dataset_statistics_1126e73ff9290db62a175b09cef7f9ffb52fd45e85983fa44422ad61da1a5fef.json.                                              
+08/20 [13:27:57] INFO     | >> Constructing tf.data.Dataset fractal20220817_data for split train[:95%], from                                                         logging_logger.py:49
+                          /mnt/bn/robotics-data-lxh-lq/openvla/datasets/open-x-embodiment/fractal20220817_data/0.1.0                                                                     
+
+######################################################################################
+# Loading the following 1 datasets (incl. sampling weight):                         #
+# fractal20220817_data: ====================================================1.000000 #
+######################################################################################
+
+                 INFO     | >> [*] Threads per Dataset: [1]                                                                                                                dataset.py:552
+                 INFO     | >> [*] Reads per Dataset: [1]                                                                                                                  dataset.py:553
+                 INFO     | >> [*] Constructing datasets...                                                                                                                dataset.py:556
+                 INFO     | >> Load dataset info from /mnt/bn/robotics-data-lxh-lq/openvla/datasets/open-x-embodiment/fractal20220817_data/0.1.0                      dataset_info.py:599
+                 INFO     | >> Constructing tf.data.Dataset fractal20220817_data for split train[:95%], from                                                         logging_logger.py:49
+                          /mnt/bn/robotics-data-lxh-lq/openvla/datasets/open-x-embodiment/fractal20220817_data/0.1.0                                                                     
+08/20 [13:27:58] INFO     | >> [*] Applying frame transforms on dataset...                                                                                                 dataset.py:601
+discrete: False
+organize_type: segment
+image_history: False
+action_history: True
+
+rgb: torch.Size([4, 1, 3, 224, 224])
+hand_rgb: None
+fwd_rgb_chunck: None
+fwd_hand_rgb_chunck: None
+fwd_mask: None
+text: torch.Size([4, 21])
+text_mask: torch.Size([4, 21])
+action: torch.Size([4, 9, 7])
+action_mask: torch.Size([4, 9])
+action_chunck: torch.Size([4, 8, 2, 7])
+chunck_mask: torch.Size([4, 8, 2])
+instr_and_action_ids: torch.Size([4, 21])
+instr_and_action_labels: torch.Size([4, 21])
+instr_and_action_mask: torch.Size([4, 21])
+data_source: action
+pass code test!!!
+
+08/20 [13:28:01] INFO     | >> Load dataset info from /mnt/bn/robotics-data-lxh-lq/openvla/datasets/open-x-embodiment/fractal20220817_data/0.1.0                      dataset_info.py:599
+                 INFO     | >> Constructing tf.data.Dataset fractal20220817_data for split all, from                                                                 logging_logger.py:49
+                          /mnt/bn/robotics-data-lxh-lq/openvla/datasets/open-x-embodiment/fractal20220817_data/0.1.0                                                                     
+                 INFO     | >> [*] Loading existing dataset statistics from                                                                                             data_utils.py:214
+                          /home/tiger/.cache/orca/dataset_statistics_1126e73ff9290db62a175b09cef7f9ffb52fd45e85983fa44422ad61da1a5fef.json.                                              
+                 INFO     | >> Constructing tf.data.Dataset fractal20220817_data for split train[:95%], from                                                         logging_logger.py:49
+                          /mnt/bn/robotics-data-lxh-lq/openvla/datasets/open-x-embodiment/fractal20220817_data/0.1.0                                                                     
+
+######################################################################################
+# Loading the following 1 datasets (incl. sampling weight):                         #
+# fractal20220817_data: ====================================================1.000000 #
+######################################################################################
+
+08/20 [13:28:02] INFO     | >> [*] Threads per Dataset: [1]                                                                                                                dataset.py:552
+                 INFO     | >> [*] Reads per Dataset: [1]                                                                                                                  dataset.py:553
+                 INFO     | >> [*] Constructing datasets...                                                                                                                dataset.py:556
+                 INFO     | >> Load dataset info from /mnt/bn/robotics-data-lxh-lq/openvla/datasets/open-x-embodiment/fractal20220817_data/0.1.0                      dataset_info.py:599
+                 INFO     | >> Constructing tf.data.Dataset fractal20220817_data for split train[:95%], from                                                         logging_logger.py:49
+                          /mnt/bn/robotics-data-lxh-lq/openvla/datasets/open-x-embodiment/fractal20220817_data/0.1.0                                                                     
+                 INFO     | >> [*] Applying frame transforms on dataset...                                                                                                 dataset.py:601
+discrete: False
+organize_type: segment
+image_history: True
+action_history: False
+
+rgb: torch.Size([4, 10, 3, 224, 224])
+hand_rgb: None
+fwd_rgb_chunck: None
+fwd_hand_rgb_chunck: None
+fwd_mask: None
+text: torch.Size([4, 19])
+text_mask: torch.Size([4, 19])
+action: torch.Size([4, 9, 7])
+action_mask: torch.Size([4, 9])
+action_chunck: torch.Size([4, 8, 2, 7])
+chunck_mask: torch.Size([4, 8, 2])
+instr_and_action_ids: torch.Size([4, 19])
+instr_and_action_labels: torch.Size([4, 19])
+instr_and_action_mask: torch.Size([4, 19])
+data_source: action
+pass code test!!!
+
+08/20 [13:28:05] INFO     | >> Load dataset info from /mnt/bn/robotics-data-lxh-lq/openvla/datasets/open-x-embodiment/fractal20220817_data/0.1.0                      dataset_info.py:599
+                 INFO     | >> Constructing tf.data.Dataset fractal20220817_data for split all, from                                                                 logging_logger.py:49
+                          /mnt/bn/robotics-data-lxh-lq/openvla/datasets/open-x-embodiment/fractal20220817_data/0.1.0                                                                     
+08/20 [13:28:06] INFO     | >> [*] Loading existing dataset statistics from                                                                                             data_utils.py:214
+                          /home/tiger/.cache/orca/dataset_statistics_1126e73ff9290db62a175b09cef7f9ffb52fd45e85983fa44422ad61da1a5fef.json.                                              
+                 INFO     | >> Constructing tf.data.Dataset fractal20220817_data for split train[:95%], from                                                         logging_logger.py:49
+                          /mnt/bn/robotics-data-lxh-lq/openvla/datasets/open-x-embodiment/fractal20220817_data/0.1.0                                                                     
+
+######################################################################################
+# Loading the following 1 datasets (incl. sampling weight):                         #
+# fractal20220817_data: ====================================================1.000000 #
+######################################################################################
+
+                 INFO     | >> [*] Threads per Dataset: [1]                                                                                                                dataset.py:552
+                 INFO     | >> [*] Reads per Dataset: [1]                                                                                                                  dataset.py:553
+                 INFO     | >> [*] Constructing datasets...                                                                                                                dataset.py:556
+                 INFO     | >> Load dataset info from /mnt/bn/robotics-data-lxh-lq/openvla/datasets/open-x-embodiment/fractal20220817_data/0.1.0                      dataset_info.py:599
+                 INFO     | >> Constructing tf.data.Dataset fractal20220817_data for split train[:95%], from                                                         logging_logger.py:49
+                          /mnt/bn/robotics-data-lxh-lq/openvla/datasets/open-x-embodiment/fractal20220817_data/0.1.0                                                                     
+08/20 [13:28:07] INFO     | >> [*] Applying frame transforms on dataset...                                                                                                 dataset.py:601
+discrete: False
+organize_type: segment
+image_history: True
+action_history: True
+
+rgb: torch.Size([4, 10, 3, 224, 224])
+hand_rgb: None
+fwd_rgb_chunck: None
+fwd_hand_rgb_chunck: None
+fwd_mask: None
+text: torch.Size([4, 18])
+text_mask: torch.Size([4, 18])
+action: torch.Size([4, 9, 7])
+action_mask: torch.Size([4, 9])
+action_chunck: torch.Size([4, 8, 2, 7])
+chunck_mask: torch.Size([4, 8, 2])
+instr_and_action_ids: torch.Size([4, 18])
+instr_and_action_labels: torch.Size([4, 18])
+instr_and_action_mask: torch.Size([4, 18])
+data_source: action
+pass code test!!!
+
