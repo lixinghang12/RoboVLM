@@ -1,0 +1,9 @@
+[submodule "openvla"]
+	path = openvla
+	url = https://github.com/ZhangHanbo/openvla_dep
+[submodule "calvin"]
+	path = calvin
+	url = https://github.com/mees/calvin
+[submodule "simplerenv"]
+	path = simplerenv
+	url = https://github.com/simpler-env/SimplerEnv
