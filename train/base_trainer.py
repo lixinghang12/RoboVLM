@@ -7,7 +7,7 @@ import torch
 import torch.nn.functional as F
 from functools import partial
 import math
-
+import torch.distributed as dist
 from utils.dist_train import get_rank
 
 import lightning.pytorch as pl
@@ -89,7 +89,10 @@ class BaseTrainer(pl.LightningModule):
         if ckpt_path is None:
             assert configs is not None, "ckpt_path and configs are both None for initialization."
             return cls(configs)
-
+        
+        if os.path.isdir(ckpt_path):
+            ckpt_source = 'deepspeed'
+        
         if ckpt_source == 'torch':
             assert configs is not None, \
                 "to initialize the model with a torch pretrained state dict, " \
@@ -127,9 +130,17 @@ class BaseTrainer(pl.LightningModule):
 
             # convert deepspeed checkpoint to lightning
             coverted_path = cls.get_converted_fp32_paths(ckpt_path)
-            assert os.path.exists(coverted_path), \
-                "Please use tools/convert_deepspeed_to_fp32.py [DEEPSPEED_CKPT]" \
-                "for checkpoint conversion first."
+            
+            if not os.path.exists(coverted_path):
+                if dist.get_rank() == 0:
+                    from utils.zero_to_fp32 import convert_zero_checkpoint_to_fp32_state_dict
+                    print(f"converting {ckpt_path} to {coverted_path}")
+                    convert_zero_checkpoint_to_fp32_state_dict(ckpt_path, coverted_path)
+                dist.barrier()
+            
+            # assert os.path.exists(coverted_path), \
+            #     "Please use tools/convert_deepspeed_to_fp32.py [DEEPSPEED_CKPT]" \
+            #     "for checkpoint conversion first."
 
             # remove unpretrained params
             cls._main_rank_print(f"Loading pretrained model from {coverted_path}...")

@@ -494,7 +494,17 @@ class RoboLLaVA(nn.Module):
         if self.train_setup_configs['freeze_backbone']:
             model.requires_grad_(False)
         else:
-            model.requires_grad_(True)
+            if self.train_setup_configs.get('train_decoder_layers', -1) == -1:
+                model.requires_grad_(True)
+            else:
+                # import pdb; pdb.set_trace()
+                model.get_model().requires_grad_(False)
+                if hasattr(model.get_model(), 'layers'):
+                    for layer in model.get_model().layers[-self.train_setup_configs['train_decoder_layers']:]:
+                        layer.requires_grad_(True)
+                elif hasattr(model.get_model(), 'blocks'):
+                    for layer in model.get_model().blocks[-self.train_setup_configs['train_decoder_layers']:]:
+                        layer.requires_grad_(True)
         
         if self.train_setup_configs.get('train_vision', False):
             model.get_vision_tower().requires_grad_(True)
@@ -575,7 +585,7 @@ class RoboLLaVA(nn.Module):
             model.get_input_embeddings().requires_grad_(False)
         
         if self.use_vision_resampler:
-            if not self.train_setup_configs.get('freeze_resmapler', False):
+            if not self.train_setup_configs.get('freeze_resampler', False):
                 self.vision_resampler.requires_grad_(True)
             else:
                 self.vision_resampler.requires_grad_(False)
@@ -585,7 +595,7 @@ class RoboLLaVA(nn.Module):
         print({k for k, v in self.named_parameters() if v.requires_grad})
         # self.train()
         # TODO: delete after precision debug
-        model.to(torch.float32)
+        model = model.to(torch.float32)
         if '16' in self.llava_config['precision']:
             if 'bf' in self.llava_config['precision']:
                 model = model.to(torch.bfloat16)

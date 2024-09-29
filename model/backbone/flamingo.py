@@ -84,8 +84,8 @@ class RoboFlamingo(nn.Module, PyTorchModelHubMixin):
             min_action=self.act_head_configs['min_action'], max_action=self.act_head_configs['max_action'])
         elif self.action_space == 'continuous':
             self.action_token_id = self.tokenizer.vocab_size - 1000
-
-        self.load_openflamingo_ckpt()
+        if self.train_setup_configs.get('load_vl_param', True):
+            self.load_openflamingo_ckpt()
         self._trainable_params_setup()
     
     def _init_llm(self):

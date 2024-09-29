@@ -1,0 +1,4 @@
+# bash bash/run.sh configs/finetune_flamingo_mpt_1b_ift_gpt_calvin_abc_fp32.json
+bash bash/run.sh configs/finetune_flamingo_mpt_1b_ift_gpt_calvin_fp32.json
+bash bash/run.sh configs/finetune_flamingo_mpt_1b_ift_gpt_calvin_fp32_no-vl-pretrain.json
+bash bash/run.sh configs/finetune_flamingo_mpt_1b_ift_gpt_ph-only_calvin_fp32.json

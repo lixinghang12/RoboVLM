@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-export http_proxy=http://bj-rd-proxy.byted.org:3128
-export https_proxy=http://bj-rd-proxy.byted.org:3128
+# export http_proxy=http://bj-rd-proxy.byted.org:3128
+# export https_proxy=http://bj-rd-proxy.byted.org:3128
+
+export http_proxy=http://sys-proxy-rd-relay.byted.org:8118
+export https_proxy=http://sys-proxy-rd-relay.byted.org:8118
+export no_proxy=.byted.org
 
 source /mnt/bn/robotics/resources/anaconda3_arnold/bin/activate robollava
 # pip install lightning==2.2.5

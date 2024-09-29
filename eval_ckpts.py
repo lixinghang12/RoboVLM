@@ -435,11 +435,64 @@ ckpt_paths = [
     # ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/calvin_finetune/2024-09-04/23-44/epoch=4-step=28775.ckpt',
     # '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/calvin_finetune/2024-09-04/23-44/2024-09-04_23:45:27.705512-project.json')
 
-    ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-23/18-28/epoch=0-step=18701.ckpt',
-    '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-23/18-28/2024-09-23_18:29:18.980334-project.json'),
+    # ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-23/18-28/epoch=0-step=18701.ckpt',
+    # '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-23/18-28/2024-09-23_18:29:18.980334-project.json'),
 
-    ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-23/20-24/epoch=0-step=18701.ckpt',
-    '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-23/20-24/2024-09-23_20:25:05.802920-project.json')
+    # ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-23/20-24/epoch=0-step=18701.ckpt',
+    # '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-23/20-24/2024-09-23_20:25:05.802920-project.json')
+
+    # ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-23/18-28/epoch=1-step=37402.ckpt',
+    # '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-23/18-28/2024-09-23_18:29:18.980334-project.json')
+
+    # ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-24/15-56/epoch=1-step=37402.ckpt',
+    # '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-24/15-56/2024-09-24_15:56:44.650075-project.json')
+
+    # ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-24/15-56/epoch=2-step=56103.ckpt',
+    # '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-24/15-56/2024-09-24_15:56:44.650075-project.json')
+
+    # ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-23/18-28/epoch=2-step=56103.ckpt',
+    # '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-23/18-28/2024-09-23_18:29:18.980334-project.json')
+
+    # ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-24/15-56/epoch=3-step=74804.ckpt',
+    #  '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-24/15-56/2024-09-24_15:56:44.650075-project.json')
+
+    # ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-25/23-39/epoch=0-step=18701.ckpt',
+    #  '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-25/23-39/2024-09-25_23:40:41.332504-project.json')
+
+    #  ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-24/19-35/epoch=0-step=37402.ckpt',
+    #   '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-24/19-35/2024-09-24_19:37:09.871127-project.json')
+
+    # ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-25/18-07/epoch=1-step=37402.ckpt',
+    #  '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-25/18-07/2024-09-25_18:08:07.628587-project.json')
+
+    # (
+    #     '/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-25/23-39/epoch=1-step=37402.ckpt',
+    #     '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-25/23-39/2024-09-25_23:40:41.332504-project.json'
+    # )
+
+    # (
+    #     '/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-25/23-39/epoch=2-step=56103.ckpt',
+    #     '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-25/23-39/2024-09-25_23:40:41.332504-project.json'
+    # )
+
+    # ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-27/00-36/epoch=2-step=56103.ckpt',
+    #  '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-27/00-36/2024-09-27_00:37:06.089257-project.json'),
+
+    # ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-25/23-39/epoch=4-step=93505.ckpt',
+    # '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-25/23-39/2024-09-25_23:40:41.332504-project.json'),
+
+    # ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-28/12-28/epoch=0-step=18701.ckpt',
+    # '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-28/12-28/2024-09-28_12:29:02.316284-project.json'),
+
+    # ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-09-28/18-50/epoch=0-step=18701.ckpt',
+    # '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-09-28/18-50/2024-09-28_18:50:35.068245-project.json')
+
+    ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-08-31/12-55/epoch=4-step=19999.ckpt',
+    '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-08-31/12-55/2024-08-31_12:56:22.831211-project.json'),
+
+    # ('/mnt/bn/robotics-data-lxh-lq-v2/checkpoints/video_pretrain_manipulation/llava/calvin_finetune/2024-08-28/16-39/epoch=4-step=320000.pt',
+    # '/mnt/bn/robotics-data-lxh-lq-v2/logs/video_pretrain_manipulation/llava/calvin_finetune/2024-08-28/16-39/2024-08-28_16:39:42.422072-project.json')
+
 ]   
 
 for i, (ckpt, config) in enumerate(ckpt_paths):

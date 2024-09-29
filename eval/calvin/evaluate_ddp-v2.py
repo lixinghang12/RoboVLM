@@ -47,6 +47,7 @@ EP_LEN = 360
 NUM_SEQUENCES = 1000
 
 CACHE_ROOT = "/mnt/bn/robotics-data-lxh-lq/RoboVLM/eval/logs"
+CACHE_ROOT = "/mnt/bn/robotics-data-lxh-lq/tmp/RobotVLM/eval/logs"
 os.system(f"sudo mkdir -p {CACHE_ROOT}")
 os.system(f"sudo chmod 777 {CACHE_ROOT}")
 

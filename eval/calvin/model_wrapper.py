@@ -177,6 +177,7 @@ class CustomModel(CalvinBaseModel):
         act_cache = []
         # self.fwd_pred_next_n = 1
         max_len = self.fwd_pred_next_n
+        max_len = 1
         # if self.tcp_rel:
         #     max_len = 1
         while len(self.action_hist_list) > max_len:
@@ -329,7 +330,7 @@ class CustomModel(CalvinBaseModel):
             robot_obs = torch.from_numpy(obs['robot_obs']).unsqueeze(0).unsqueeze(0).unsqueeze(0).repeat(1, 1, self.fwd_pred_next_n, 1)
             action = tcp_to_world_frame(action, robot_obs)
 
-        action = self.ensemble_action(action)
+        # action = self.ensemble_action(action)
 
         # if self.tcp_rel:
         #     robot_obs = torch.from_numpy(obs['robot_obs']).unsqueeze(0).unsqueeze(0)

@@ -181,6 +181,8 @@ def experiment(variant):
     import clip
     if variant['model'] == 'qwen':
         clip_preprocess = model.model.qwen_model.transformer.visual.image_transform
+    # elif 'llava' in variant['model'].lower():
+    #     clip_preprocess = model.model.llava_model.get_vision_tower().image_processor
     else:
         if variant.get('image_size', 224) == 336:
             _, clip_preprocess = clip.load('ViT-L/14@336px', device='cpu')

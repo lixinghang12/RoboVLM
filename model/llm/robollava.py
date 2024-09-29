@@ -32,6 +32,11 @@ LLAVA1_6_CFG = {
     'V1.57b': {
         'pretrained_model_base': None,
         'pretrained_model_name_or_path': '/mnt/bn/robotics-data-lxh-lq/LLaVA/llava-v1.5-7b'
+    },
+
+    "MPT7b":{
+        'pretrained_model_base': None,
+        'pretrained_model_name_or_path': '/mnt/bn/robotics-data-lxh-lq/LLaVA/LLaVA-Lightning-MPT-7B-preview'
     }
 }
 
@@ -45,6 +50,7 @@ def default_llava_cfgs(llm_name):
     llava_cfg['llava1.6_yi_34b'] = LLAVA1_6_CFG['YI34b']
     
     llava_cfg['llava-v1.5-7b'] = LLAVA1_6_CFG['V1.57b']
+    llava_cfg['llava-mpt-7b'] = LLAVA1_6_CFG['MPT7b']
     # TODO: I think we may only have to test llava 1.6
     # llava_cfg['llava1.5_vicuna_7b'] = LLAVA1_5_CFG['VICUNA7b']
     # llava_cfg['llava1.5_vicuna_13b'] = LLAVA1_5_CFG['VICUNA13b']
@@ -65,12 +71,14 @@ def build_llava(llava_config, precision='bf16'):
     model_path = llava_config.pop('pretrained_model_name_or_path')
     model_name = get_model_name_from_path(model_path)
 
-    tokenizer, model, _, __ = load_pretrained_model(model_path, model_base, model_name, use_flash_attn='16' in precision, device_map="cpu")
+    tokenizer, model, _, __ = load_pretrained_model(model_path, model_base, model_name, use_flash_attn=('16' in precision and 'mpt' not in model_name.lower()), device_map="cpu")
     # import pdb; pdb.set_trace()
     return tokenizer, model
 
 if __name__ == "__main__":
     llava_config = "llava1.6_vicuna_7b"
+    llava_config = "llava-v1.5-7b"
+    # llava_config = "llava-mpt-7b"
     # llava_config = "llava1.6_mistral_7b"
-    import pdb; pdb.set_trace()
     tokenizer, model = build_llava(llava_config)
+    import pdb; pdb.set_trace()

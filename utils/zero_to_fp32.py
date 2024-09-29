@@ -611,6 +611,9 @@ def convert_zero_checkpoint_to_fp32_state_dict(
         )
 
     """
+    if os.path.exists(output_file):
+        return
+    
     state_dict = get_fp32_state_dict_from_zero_checkpoint(checkpoint_dir, tag)
 
     # additional logic to ensure we keep the lightning state dict as well from rank 0.
